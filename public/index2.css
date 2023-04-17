@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+  }
+
+  body{
+    background-color: rgb(20, 20, 20);
+  }
+
+  .container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .card{
+    position: relative;
+    height: 300px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .card:nth-child(1){
+    background: linear-gradient(45deg, rgba(13, 231, 122, 0.5), rgba(7, 235, 186, 0.507));
+      filter: drop-shadow(0px 0px 20px rgb(57, 131, 131));
+  }
+
+  .card:nth-child(1)::after{
+    content: '';
+    position: absolute;
+    height: 290px;
+    width: 240px;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+    .card:nth-child(2){
+      background: linear-gradient(45deg, rgba(231, 13, 231, 0.5), rgba(7, 151, 235, 0.507));
+      filter: drop-shadow(0px 0px 20px rgb(16, 198, 243));
+    }
+  
+    .card:nth-child(2)::after{
+      content: '';
+      position: absolute;
+      height: 290px;
+      width: 240px;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .perfil{
+      position: absolute;
+      height: 240px;
+      width: 190px;
+      background-color: white;
+      transition: 400ms ease-in-out;
+      z-index: 1;
+    }
+
+    .card:hover .detalle{
+      transform: scale(1);
+      z-index: 2;
+    }
+
+      /*detalles*/
+      .detalle{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 200px;
+        transform: scale(0);
+        transition: 400ms ease-in-out;
+      }
+
+      .bx{
+        font-size: 25px;
+      }
+
+      @media (max-width:800px){
+        .container{
+          display: grid;
+        }
+      }
+
+
+      .btn {
+        display: inline-block;
+        padding: 8px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        text-align: center;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.2s ease-in-out;
+      }
+      
+      .btn:hover {
+        background-color: #0062cc;
+      }
+
+
+
+
+
+  
+
+  
